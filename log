@@ -19,3 +19,9 @@ treemap.c:77:13: error: implicit declaration of function 'isequal' [-Werror=impl
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b92e25e
+vi., 22 de abr. de 2022 11:28:23: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|7
+total_score: 5/70
+37cc514
