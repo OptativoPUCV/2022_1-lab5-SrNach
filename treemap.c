@@ -54,20 +54,22 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     while (tree->current != NULL){
         aux = tree->current;
         if (tree->lower_than(tree->current->pair->key, key) == 0){
-            printf("izq");
             tree->current = tree->current->left;
             continue;
         }
         if (tree->lower_than(tree->current->pair->key, key) == 1){
             tree->current = tree->current->right;
-            printf("der");
             continue;
         }
     }
 
-    TreeNode* node = createTreeNode(key, value);
-    tree->current = node;
+    
+    //TreeNode* node = createTreeNode(key, value);
+    tree->current = createTreeNode(key, value);
     tree->current->parent = aux;
+
+    if (tree->lower_than(tree->current->pair->key, aux->pair->key)) aux->right = tree->current;
+    else aux->left = tree->current;
 }
 
 TreeNode * minimum(TreeNode * x){
