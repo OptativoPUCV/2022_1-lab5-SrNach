@@ -127,3 +127,20 @@ vi., 22 de abr. de 2022 12:07:26:
  tests:  15|4
 total_score: 25/70
 f9d2930
+vi., 22 de abr. de 2022 23:36:27: 
+ treemap.c | 22 +++++++++++++++++++---
+ 1 file changed, 19 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:80:35: error: comparison between pointer and integer [-Werror]
+     if (node->left == node->right == NULL){
+                                   ^~
+treemap.c:80:20: error: suggest parentheses around comparison in operand of '==' [-Werror=parentheses]
+     if (node->left == node->right == NULL){
+         ~~~~~~~~~~~^~~~~~~~~~~~~~
+treemap.c:82:33: error: statement with no effect [-Werror=unused-value]
+             node->parent->right == NULL;
+                                 ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2014ed8
