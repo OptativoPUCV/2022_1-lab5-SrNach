@@ -366,3 +366,9 @@ treemap.c:140:46: error: return makes pointer from integer without a cast [-Werr
 cc1.exe: all warnings being treated as errors
 Compilation failed
 080d910
+sá., 23 de abr. de 2022  1:03:43: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  23|2
+total_score: 50/70
+979c3c1
