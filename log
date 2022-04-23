@@ -404,3 +404,8 @@ treemap.c:146:1: error: expected ';' before '}' token
 cc1.exe: all warnings being treated as errors
 Compilation failed
 7589ccd
+sá., 23 de abr. de 2022  1:27:30: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+adc95e0

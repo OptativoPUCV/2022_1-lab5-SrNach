@@ -142,7 +142,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     while (tree->lower_than(tree->current->pair->key, key)){
         tree->current = tree->current->right;
     }
-    return tree->current
+    return tree->current->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
