@@ -110,9 +110,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             if (hijo) node->parent->right = minim;
             else node->parent->left = minim;
         }
-        minim->parent = node->parent;
-        minim->left = node->left;
-        minim->right = node->right;
+        node->pair = minim->pair;
         removeNode(tree,minimum(node->right));
     }
 }
