@@ -106,10 +106,6 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     //Con dos hijos
     if (node->left != NULL && node->right != NULL){
         TreeNode* minim = minimum(node->right);
-        if (!(hijo == -1)){
-            if (hijo) node->parent->right = minim;
-            else node->parent->left = minim;
-        }
         node->pair = minim->pair;
         removeNode(tree,minimum(node->right));
     }
