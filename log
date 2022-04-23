@@ -242,3 +242,9 @@ treemap.c:109:20: error: logical not is only applied to the left hand side of co
 cc1.exe: all warnings being treated as errors
 Compilation failed
 215fad9
+sá., 23 de abr. de 2022  0:35:03: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  17|4
+total_score: 35/70
+b5b1f29

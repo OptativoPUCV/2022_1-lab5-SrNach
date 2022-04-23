@@ -79,7 +79,7 @@ TreeNode * minimum(TreeNode * x){
 void removeNode(TreeMap * tree, TreeNode* node) {
     int hijo; //izq = 0, der = 1
 
-    if (node->parent == NULL) hijo = 2;
+    if (node->parent == NULL) hijo = -1;
     else{
         if (node == node->parent->left) hijo = 0;
         else hijo = 1;
@@ -95,18 +95,18 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
     //Sólo un hijo
     if (node->left == NULL && node->right != NULL){
-        if (!(hijo == 2)) node->right->parent = node->parent;
+        if (!(hijo == -1)) node->right->parent = node->parent;
         free(node);
         return;}
     if (node->left != NULL && node->right == NULL){
-        if (!(hijo == 2)) node->left->parent = node->parent;
+        if (!(hijo == -1)) node->left->parent = node->parent;
         free(node);
         return;}
 
     //Con dos hijos
     if (node->left != NULL && node->right != NULL){
         TreeNode* minim = minimum(node->right);
-        if ((!hijo == 2)){
+        if (!(hijo == -1)){
             if (hijo) node->parent->right = minim;
             else node->parent->left = minim;
         }
