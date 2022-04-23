@@ -78,12 +78,9 @@ TreeNode * minimum(TreeNode * x){
 
 void removeNode(TreeMap * tree, TreeNode* node) {
     int hijo; //izq = 0, der = 1
-
-    if (node->parent == NULL) hijo = -1;
-    else{
-        if (node == node->parent->left) hijo = 0;
-        else hijo = 1;
-    }
+    
+    if (node == node->parent->left) hijo = 0;
+    else hijo = 1;
 
     if (hijo == 1) node->parent->right = node->left;
     if (hijo == 0) node->parent->left = node->left;
