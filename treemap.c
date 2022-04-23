@@ -146,7 +146,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    if (tree->current != NULL)
+    if (tree->current->right != NULL)
         tree->current = minimum(tree->current->right);
     return tree->current->pair;
 }
