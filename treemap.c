@@ -149,10 +149,9 @@ Pair * firstTreeMap(TreeMap * tree) {
     return tree->current->pair;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {/*
+Pair * nextTreeMap(TreeMap * tree) {
     if (tree->current->right != NULL)
         tree->current = tree->current->right;
     tree->current = minimum(tree->current);
-    return tree->current->pair;*/
-    return tree->current->right->pair;
+    return tree->current->pair;
 }
