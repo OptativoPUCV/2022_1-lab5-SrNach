@@ -95,11 +95,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
     //Sólo un hijo
     if (node->left == NULL && node->right != NULL){
-        if (!(hijo == -1)) node->right->parent = node->parent;
+        node->right->parent = node->parent;
         free(node);
         return;}
     if (node->left != NULL && node->right == NULL){
-        if (!(hijo == -1)) node->left->parent = node->parent;
+        node->left->parent = node->parent;
         free(node);
         return;}
 
