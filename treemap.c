@@ -139,9 +139,9 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 Pair * upperBound(TreeMap * tree, void* key) {
     if (searchTreeMap(tree, key) != NULL) return searchTreeMap(tree, key);
 
-    while (tree->lower_than(tree->current->pair->key, key)){
+    tree->current = tree->root;
+    while (tree->lower_than(key, tree->current->pair->key) == 0){
         tree->current = tree->current->right;
-        if (tree->current == NULL)break;
     }
     return tree->current->pair;
 }
