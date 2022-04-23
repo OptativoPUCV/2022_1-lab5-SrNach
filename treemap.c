@@ -86,18 +86,21 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         if (!hijo) node->parent->left = NULL;
         else node->parent->right = NULL;
         free(node);
-        return;}
+        return;
+    }
 
     if (node->left == NULL && node->right != NULL){
-        if (!hijo) node->parent->left = node->right;
-        else node->parent->right = node->right;
+        if (hijo) node->parent->right = node->right;
+        else node->parent->left = node->right;
         free(node);
-        return;}
+        return;
+    }
     if (node->left != NULL && node->right == NULL){
-        if (!hijo) node->parent->left = node->left;
-        else node->parent->right = node->left;
+        if (hijo) node->parent->right = node->left;
+        else node->parent->left = node->left;
         free(node);
-        return;}
+        return;
+    }
 
 
 }
@@ -128,7 +131,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     }
     return NULL;
 }
-
 
 Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
