@@ -92,12 +92,14 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     if (node->left == NULL && node->right != NULL){
         if (hijo) node->parent->right = node->right;
         else node->parent->left = node->right;
+        node->right->parent = node->parent;
         free(node);
         return;
     }
     if (node->left != NULL && node->right == NULL){
         if (hijo) node->parent->right = node->left;
         else node->parent->left = node->left;
+        node->left->parent = node->parent;
         free(node);
         return;
     }
