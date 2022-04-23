@@ -198,3 +198,23 @@ sá., 23 de abr. de 2022  0:25:04:
  1 file changed, 2 insertions(+)
  tests:  0|0
 dc35984
+sá., 23 de abr. de 2022  0:33:05: 
+ treemap.c | 18 ++++++++++--------
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+In file included from test.c:4:0:
+treemap.c: In function 'removeNode':
+treemap.c:98:19: error: comparison of constant '-1' with boolean expression is always false [-Werror=bool-compare]
+         if (!hijo == -1) node->right->parent = node->parent;
+                   ^~
+treemap.c:98:19: error: logical not is only applied to the left hand side of comparison [-Werror=logical-not-parentheses]
+treemap.c:102:19: error: comparison of constant '-1' with boolean expression is always false [-Werror=bool-compare]
+         if (!hijo == -1) node->left->parent = node->parent;
+                   ^~
+treemap.c:102:19: error: logical not is only applied to the left hand side of comparison [-Werror=logical-not-parentheses]
+treemap.c:109:19: error: comparison of constant '-1' with boolean expression is always false [-Werror=bool-compare]
+         if (!hijo == -1){
+                   ^~
+treemap.c:109:19: error: logical not is only applied to the left hand side of comparison [-Werror=logical-not-parentheses]
+cc1.exe: all warnings being treated as errors
+Compilation failed
+38223fa
