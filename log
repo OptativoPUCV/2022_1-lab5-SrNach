@@ -349,3 +349,20 @@ sá., 23 de abr. de 2022  0:57:17:
  tests:  22|2
 total_score: 50/70
 e2e2f94
+sá., 23 de abr. de 2022  1:03:16: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+treemap.c: In function 'upperBound':
+treemap.c:140:9: error: implicit declaration of function 'searchMap' [-Werror=implicit-function-declaration]
+     if (searchMap(tree, key) != NULL) return searchMap(tree, key);
+         ^~~~~~~~~
+treemap.c:140:30: error: comparison between pointer and integer [-Werror]
+     if (searchMap(tree, key) != NULL) return searchMap(tree, key);
+                              ^~
+treemap.c:140:46: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     if (searchMap(tree, key) != NULL) return searchMap(tree, key);
+                                              ^~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+080d910
