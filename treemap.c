@@ -144,7 +144,7 @@ Pair * firstTreeMap(TreeMap * tree) {
     while (tree->current->left != NULL){
         tree->current = tree->current->left;
     }
-    return tree->current;
+    return tree->current->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
